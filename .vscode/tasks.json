@@ -1,0 +1,77 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "colcon",
+			"args": [
+				"build",
+				"--symlink-install",
+				"--event-handlers",
+				"console_cohesion+",
+				"--base-paths",
+				"${workspaceFolder}",
+				"--cmake-args",
+				"-DCMAKE_BUILD_TYPE=Release",
+				"-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+			],
+			"problemMatcher": [
+				"$catkin-gcc"
+			],
+			"group": "build",
+			"label": "colcon: build"
+		},
+		{
+			"type": "colcon",
+			"args": [
+				"build",
+				"--symlink-install",
+				"--event-handlers",
+				"console_cohesion+",
+				"--base-paths",
+				"${workspaceFolder}",
+				"--cmake-args",
+				"-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+				"-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+			],
+			"problemMatcher": [
+				"$catkin-gcc"
+			],
+			"group": "build",
+			"label": "colcon: build(RelWithDebInfo)"
+		},
+		{
+			"type": "colcon",
+			"args": [
+				"build",
+				"--symlink-install",
+				"--event-handlers",
+				"console_cohesion+",
+				"--base-paths",
+				"${workspaceFolder}",
+				"--cmake-args",
+				"-DCMAKE_BUILD_TYPE=Debug",
+				"-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+			],
+			"problemMatcher": [
+				"$catkin-gcc"
+			],
+			"group": "build",
+			"label": "colcon: build(Debug)"
+		},
+		{
+			"type": "colcon",
+			"args": [
+				"test",
+				"--event-handlers",
+				"console_cohesion+",
+				"--base-paths",
+				"${workspaceFolder}"
+			],
+			"problemMatcher": [
+				"$catkin-gcc"
+			],
+			"group": "test",
+			"label": "colcon: test"
+		}
+	]
+}
